@@ -18,6 +18,7 @@ import Players from './pages/dashboard/Players';
 import GerenciarVideos from './pages/dashboard/Gerenciarvideos';
 import Playlists from './pages/dashboard/Playlists';
 import Agendamentos from './pages/dashboard/Agendamentos';
+import StreamingControl from './pages/dashboard/StreamingControl';
 
 // Layouts
 import AuthLayout from './layouts/AuthLayout';
@@ -64,7 +65,8 @@ function App() {
             <Route path="players" element={<Players />} />
             <Route path="gerenciarvideos" element={<GerenciarVideos />} />
             <Route path="playlists" element={<Playlists />} />
-            <Route path="agendamentos" element={<Agendamentos />} /> 
+            <Route path="agendamentos" element={<Agendamentos />} />
+            <Route path="streaming" element={<StreamingControl />} />
           </Route>
 
           {/* Fallback route */}

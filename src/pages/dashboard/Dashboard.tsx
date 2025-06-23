@@ -5,7 +5,7 @@ import VideoPlayer from '../../components/VideoPlayer';
 import {
   Settings, Users, BarChart, FileVideo,
   PlayCircle, Play, Smartphone, RefreshCw,
-  FolderPlus, Calendar, Youtube, Wifi, ArrowLeftRight
+  FolderPlus, Calendar, Youtube, Wifi, ArrowLeftRight, Radio
 } from 'lucide-react';
 
 const Dashboard: React.FC = () => {
@@ -33,7 +33,7 @@ const Dashboard: React.FC = () => {
 
               <div className="mt-4">
                 <h3 className="text-lg font-semibold text-gray-800">Servidor Principal</h3>
-                <p className="text-gray-600">servidor</p>
+                <p className="text-gray-600">Wowza (51.222.156.223)</p>
               </div>
             </div>
 
@@ -81,6 +81,13 @@ const Dashboard: React.FC = () => {
           <hr className="mb-4" />
 
           <div className="grid grid-cols-3 gap-4">
+            <Link to="/dashboard/streaming" className="flex flex-col items-center justify-center p-3 hover:bg-gray-50 rounded-lg transition-colors">
+              <div className="w-12 h-12 flex items-center justify-center bg-primary-100 text-primary-600 rounded-full mb-2">
+                <Radio className="h-6 w-6" />
+              </div>
+              <span className="text-sm text-gray-700 text-center">Controle de Transmissão</span>
+            </Link>
+
             <Link to="/dashboard/dados-conexao" className="flex flex-col items-center justify-center p-3 hover:bg-gray-50 rounded-lg transition-colors">
               <div className="w-12 h-12 flex items-center justify-center bg-primary-100 text-primary-600 rounded-full mb-2">
                 <Settings className="h-6 w-6" />
@@ -173,8 +180,6 @@ const Dashboard: React.FC = () => {
               <span className="text-sm text-gray-700 text-center">Gerenciar Vídeos</span>
             </Link>
 
-
-            {/* Aqui está o link adicionado */}
             <Link to="/dashboard/playlists" className="flex flex-col items-center justify-center p-3 hover:bg-gray-50 rounded-lg transition-colors">
               <div className="w-12 h-12 flex items-center justify-center bg-primary-100 text-primary-600 rounded-full mb-2">
                 <FolderPlus className="h-6 w-6" />
@@ -191,7 +196,6 @@ const Dashboard: React.FC = () => {
               </div>
               <span className="text-sm text-gray-700 text-center">Agendar Playlists</span>
             </Link>
-
 
             <div className="flex flex-col items-center justify-center p-3 hover:bg-gray-50 rounded-lg transition-colors">
               <div className="w-12 h-12 flex items-center justify-center bg-primary-100 text-primary-600 rounded-full mb-2">
